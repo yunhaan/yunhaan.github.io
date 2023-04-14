@@ -1,48 +1,53 @@
 baseurl = "https://yunhaan.github.io"
 metaDataFormat = "yaml"
-title = "Yunhan's website"
+title = "Yunhan's Homepage"
 theme = "blist"
 
 DefaultContentLanguage = "en"
 DefaultContentLanguageInSubdir = true
+
 [languages]
   [languages.en]
-    contentDir = "content/en" #English
+    contentDir = "content/en" # English
     weight = 1
     languageName = "English"
     [languages.en.params]
       introTitle = "Hey! I'm Yunhan Liu"
-      introSubtitle = "a SCAD trained industrial designer!"
-      introPhoto = ""
-      logo = ""
-    [[languages.en.menu.main]]
-        name = "Portfolio"
-        url = "blog"
-        weight = 1
+      introSubtitle = "A dedicated student in Industrial Design. Welcome to my world of ideas & have fun!"
+      introPhoto = "/yunhan.jpeg"
+      logo = "/icon.png"
 
     [[languages.en.menu.main]]
         name = "About"
         url = "page/about/"
+        weight = 1
+
+    [[languages.en.menu.main]]
+        name = "Portfolio"
+        url = "portfolio"
         weight = 2
         
   [languages.zh]
-    contentDir = "content/zh" #French
+    contentDir = "content/zh" # Chinese
     weight = 1
     languageName = "中文"
+    title = "韵涵的主页"
     [languages.zh.params]
       introTitle = "你好！我是刘韵涵"
-      introSubtitle = "我最爱陈子祎"
-      introPhoto = "/picture.jpg"
-      logo = "/blist-logo.png"
+      introSubtitle = "一位专注于工业设计的学生，欢迎来到我的创意世界！"
+      introPhoto = "/yunhan.jpeg"
+      logo = "/icon.png"
+
     [[languages.zh.menu.main]]
         name = "作品集"
-        url = "blog"
-        weight = 1
+        url = "portfolio"
+        weight = 2
 
     [[languages.zh.menu.main]]
         name = "关于我"
         url = "page/about/"
-        weight = 2
+        weight = 1
+
 
 [params]
   # Enable the darkmode toggle in header
@@ -67,7 +72,7 @@ DefaultContentLanguageInSubdir = true
 
   # Custom copyright - optional
   copyright = "Copyright © 2023 - Yunhan Liu · All rights reserved"
-  favicon = "/favicon.svg"
+  favicon = "/icon.png"
 
   # Color for the intro details and social links block, not applicable for dark mode
   # Supported values: Any color from TailwindCSS default colors
@@ -75,7 +80,7 @@ DefaultContentLanguageInSubdir = true
   ascentColor = "bg-blue-100"
 
   # The page bundle that is shown on the front page
-  frontBundle = "blog"
+  frontBundle = "portfolio"
 
   # Used to hide the post metadata such as posted date, reading time and word count
   # Can be used at site level or page level
@@ -98,7 +103,7 @@ DefaultContentLanguageInSubdir = true
 [params.comments]
   # Supports disqus, giscus and utterances
   # Check hugo docs for setting up disqus
-  system = "giscus"
+  system = "disqus"
 
   # Options for giscus, exclude hyphens
   repo = ""
@@ -120,14 +125,11 @@ DefaultContentLanguageInSubdir = true
 [params.homepage.social]
   # Global params common for both languages
   title = "Follow me"
-  description = "I work on everything coding and tweet developer memes"
+  description = "much more than industrial design"
 
   [[params.homepage.social.icons]]
-    website = "twitter"
-    url = "https://twitter.com/"
-  [[params.homepage.social.icons]]
     website = "linkedin"
-    url = "https://linkedin.com/in/"
+    url = "https://www.linkedin.com/in/yunhan-liu-b46b1a193/"
   [[params.homepage.social.icons]]
     website = "instagram"
     url = "https://instagram.com"
