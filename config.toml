@@ -1,153 +1,124 @@
-baseurl = "https://yunhaan.github.io"
-metaDataFormat = "yaml"
-title = "Yunhan's Homepage"
-theme = "blist"
+baseURL       = "http://example.org/"
+languageCode  = "en-us"
+title         = "Yunhan's Creative Space"
+theme         = "roxo-hugo"
+summarylength = 25
 
-DefaultContentLanguage = "en"
-DefaultContentLanguageInSubdir = true
+# Site Menus
+[menu]
+  # Navbar Menus
+  [[menu.nav]]
+    name    = "Home"
+    url     = ""
+    weight  = 1
+  [[menu.nav]]
+    name    = "About"
+    url     = "about"
+    weight  = 2
+  [[menu.nav]]
+    name    = "Portfolio"
+    url     = "portfolio"
+    weight  = 3
+  [[menu.nav]]
+    name    = "Get in touch"
+    url     = "contact"
+    weight  = 4
 
-[languages]
-  [languages.en]
-    contentDir = "content/en" # English
-    weight = 1
-    languageName = "English"
-    [languages.en.params]
-      introTitle = "Hey! I'm Yunhan Liu"
-      introSubtitle = "A dedicated student in Industrial Design. Welcome to my world of ideas & have fun!"
-      introPhoto = "/yunhan.jpeg"
-      logo = "/icon.png"
-
-    [[languages.en.menu.main]]
-        name = "About"
-        url = "page/about/"
-        weight = 1
-
-    [[languages.en.menu.main]]
-        name = "Portfolio"
-        url = "portfolio"
-        weight = 2
-        
-  [languages.zh]
-    contentDir = "content/zh" # Chinese
-    weight = 1
-    languageName = "中文"
-    title = "韵涵的主页"
-    [languages.zh.params]
-      introTitle = "你好！我是刘韵涵"
-      introSubtitle = "一位专注于工业设计的学生，欢迎来到我的创意世界！"
-      introPhoto = "/yunhan.jpeg"
-      logo = "/icon.png"
-
-    [[languages.zh.menu.main]]
-        name = "作品集"
-        url = "portfolio"
-        weight = 2
-
-    [[languages.zh.menu.main]]
-        name = "关于我"
-        url = "page/about/"
-        weight = 1
-
-
+# Site Params
 [params]
-  # Enable the darkmode toggle in header
-  darkModeToggle = true
+  logo = "images/lyh-logo.png"
+  logo_footer = "images/lyh-logo.png"
+  selfie = "images/selfie.png"
+  resume = "files/resume_YunhanLiu.pdf"
+  favicon_icon = "images/favicon.ico"
+  favicon_shortcut_icon = "images/favicon.png"
+  custom_stylesheets = []   # [ "scss/my_1.scss", "scss/my_2.scss" ]
+  dateFormat = "26 FEB 1994"
+  # Meta data
+  description = "Roxo Hugo themes | Design Agency Template by StaticMania"
+  author = "StaticMania"
+  # Google Analitycs
+  googleAnalitycsID = "Your ID"
+  # We're using formspree.io for form handling, paste your formspree url below
+  fabform  = "https://fabform.io/f/USAg2Jl"
+
+  # Contact Form
+  [params.contactForm]
+    placeholder_first_name        = "First Name"
+    placeholder_last_name         = "Last Name"
+    placeholder_email             = "Email"
+    placeholder_project_type      = "Project Type"
+    placeholder_about_the_project = "About the Project"
+    send_message                  = "Send Message"
+
+    [[params.contactForm.projectType]]
+      value = "gd"
+      title  = "Graphics Design"
+    [[params.contactForm.projectType]]
+      value = "wd"
+      title  = "Web Design"
   
-  # Enable search in header
-  enableSearch = true
+  # Navbar Action Button
+  [params.navAction]
+    status  = true
+    name    = "Get in touch"
+    url     = "contact"
+  
 
-  # Option to customize the search parameters of a page
-  # Below are the supported options; Note that including entire content
-  # may slowdown the loading of search results
-  # Title of page is included by default
-  searchKeys = [
-    "tags",
-    "date",
-    "categories",
-    "summary",
-    "content",
-    "link",
-    "author"
-  ]
+  # Banner Section
+  [params.banner]
+    enable                = true
+    background_image      = "images/backgrounds/index-bg.jpg"
+    heading               = "Welcome to Yunhan's Creative Space"
+    tagline               = "DESIGN THAT EMBRACES AND CONNECTS"
+    primary_button        = "See My Works"
+    primary_button_url    = "portfolio"
+    secondary_button      = "Connect with Me"
+    secondary_button_url  = "contact"
 
-  # Custom copyright - optional
-  copyright = "Copyright © 2023 - Yunhan Liu · All rights reserved"
-  favicon = "/icon.png"
+  [params.blog]
+    read_more             = "read more"
 
-  # Color for the intro details and social links block, not applicable for dark mode
-  # Supported values: Any color from TailwindCSS default colors
-  # Reference: https://tailwindcss.com/docs/customizing-colors
-  ascentColor = "bg-blue-100"
+  [params.portfolio]
+    enable    = true
+    title     = "OUR RECENT WORKS"
+    subtitle  = "Crafting experiences and seeking to make the complex clear & beautiful."
+    view_project = "view project"
+    more_works = "MORE WORKS"
+    scroll_down = "scroll down"
 
-  # The page bundle that is shown on the front page
-  frontBundle = "portfolio"
-
-  # Used to hide the post metadata such as posted date, reading time and word count
-  # Can be used at site level or page level
-  hideMeta = false
-
-  # To hide "Other languages" option if the post is available in multiple languages
-  # Can be used at site level or page level
-  hideOtherLanguages = false
-
-  # Add support for Table of contents
-  # Can be added to a page level also in markdown frontmatter
-  toc = true
-
-  # Hides the thumbnail in post view
-  # Thumbnails in home and blog pages will still be shown
-  # This setting can also be in page's markdown file
-  hidePageThumbnail = false
-
-# Comments system
-[params.comments]
-  # Supports disqus, giscus and utterances
-  # Check hugo docs for setting up disqus
-  system = "disqus"
-
-  # Options for giscus, exclude hyphens
-  repo = ""
-  repoid = ""
-  category = ""
-  categoryid = ""
-  mapping = ""
-  strict = ""
-  reactionsenabled = ""
-  emitmetadata = ""
-  inputposition = ""
-  theme = ""
-
-  # Options for utterances, exclude hyphens
-  # repo = ""
-  # issueterm = ""
-  # theme = ""
-
-[params.homepage.social]
-  # Global params common for both languages
-  title = "Follow me"
-  description = "much more than industrial design"
-
-  [[params.homepage.social.icons]]
-    website = "linkedin"
-    url = "https://www.linkedin.com/in/yunhan-liu-b46b1a193/"
-  [[params.homepage.social.icons]]
-    website = "instagram"
-    url = "https://instagram.com"
-
-[[menu.main]]
-  name = "About"
-  url = "/about"
-
-[build]
-  writeStats = true
-
-[outputs]
-  home = ["HTML", "RSS", "JSON"]
-
-# syntax highlight settings
-[markup]
-  [markup.highlight]
-    style = "dracula"
-  [markup.goldmark.renderer]
-    # Enable to include inline HTML
-    unsafe = true
+  [params.footer]
+    params.footer.qr_print = false
+    # Footer Contact Info
+    [params.footer.contactInfo]
+      title   = "Contact Info"
+      address = ""
+      phone   = ""
+      email   = "liuyunhan01 [at] outlook [dot] com"
+      # Footer Sitemap
+      [params.footer.sitemap]
+        title   = "Sitemap"
+        [[params.footer.sitemap.link]]
+          name = "About Me"
+          url  = "about"
+        [[params.footer.sitemap.link]]
+          name = "Projects"
+          url  = "portfolio"
+        [[params.footer.sitemap.link]]
+          name = "Contact"
+          url  = "contact"
+      # Footer Social Media
+      [params.footer.social]
+        title   = "Social Media"
+        [[params.footer.social.link]]
+          name = "Linkedin"
+          url  = "https://www.linkedin.com/in/yunhan-scad/"
+        [[params.footer.social.link]]
+          name = "Instagram"
+          url  = "#"
+      # Footer Service
+      [params.footer.service]
+        title       = "Location"
+        description = "516 Drayton St, Savannah, GA 31401"
+      [params.footer.back_to_top]
+        description = "I want to <br> visit again"
