@@ -1,7 +1,7 @@
 baseURL       = "http://example.org/"
 languageCode  = "en-us"
 title         = "Yunhan's Creative Space"
-theme         = "roxo-hugo"
+theme         = "new-roxo"
 summarylength = 25
 
 # Site Menus
