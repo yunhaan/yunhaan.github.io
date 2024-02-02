@@ -121,4 +121,4 @@ summarylength = 25
         title       = "Location"
         description = "516 Drayton St, Savannah, GA 31401"
       [params.footer.back_to_top]
-        description = "I want to <br> visit again"
+        description = "Back to Top"
