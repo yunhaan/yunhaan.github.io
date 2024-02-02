@@ -73,8 +73,8 @@ summarylength = 25
     tagline               = "DESIGN THAT EMBRACES AND CONNECTS"
     primary_button        = "See My Works"
     primary_button_url    = "portfolio"
-    secondary_button      = "Connect with Me"
-    secondary_button_url  = "contact"
+    secondary_button      = "Get to Know Me"
+    secondary_button_url  = "about"
 
   [params.blog]
     read_more             = "read more"
