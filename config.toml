@@ -69,7 +69,7 @@ summarylength = 25
   [params.banner]
     enable                = true
     background_image      = "images/backgrounds/index-bg.jpg"
-    heading               = "Welcome to Yunhan's Creative Space"
+    heading               = "Creative Space"
     tagline               = "DESIGN THAT EMBRACES AND CONNECTS"
     primary_button        = "See My Works"
     primary_button_url    = "portfolio"
